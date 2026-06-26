@@ -42,16 +42,16 @@ export default function Courses() {
   ];
 
   return (
-    <section className="py-6 md:py-15 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section className=" md:py-15 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         
         {/* Heading */}
         <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
             Popular Courses
           </h2>
 
-          <p className="max-w-2xl mx-auto text-gray-600 text-lg">
+          <p className="max-w-2xl mx-auto text-gray-600 md:text-lg">
             Explore our most sought-after programs designed to help students
             excel in academics and competitive examinations.
           </p>

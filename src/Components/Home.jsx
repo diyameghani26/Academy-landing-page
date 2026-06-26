@@ -26,18 +26,18 @@ const Home = () => {
           </span>
         </h1>
 
-        <p className="mt-6 text-gray-600 text-lg max-w-xl">
+        <p className=" mt-2 md:mt-6 text-gray-600  text-sm md:text-lg max-w-xl">
           Experience a tailored learning environment where
           personalized mentorship meets modern educational
           technology to unlock your true potential.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 mt-8">
-          <button className="bg-blue-600 text-white px-8 py-4 rounded-xl text-xl">
+          <button className="bg-blue-600 text-white px-8 py-3 md:py-4 rounded-xl  md:text-xl">
             Book Demo Class
           </button>
 
-          <button className="border border-gray-300 px-8 py-4 rounded-xl  text-xl">
+          <button className="border border-gray-300 px-8 py-3 md:py-4 rounded-xl  md:text-xl">
             View Courses
           </button>
         </div>
@@ -87,7 +87,7 @@ const Home = () => {
     
     {/* Heading */}
     <div className="text-center md:mt-6 mb-12">
-      <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+      <h2 className="text-2xl md:text-5xl font-bold text-gray-900 mb-4">
         Why Choose Us?
       </h2>
 
@@ -110,7 +110,7 @@ const Home = () => {
           Expert Faculty
         </h3>
 
-        <p className="text-gray-600 leading-relaxed">
+        <p className="text-gray-600 md:leading-relaxed">
           Learn from distinguished educators with decades of combined
           experience in competitive exams.
         </p>
@@ -126,7 +126,7 @@ const Home = () => {
           Small Batch Sizes
         </h3>
 
-        <p className="text-gray-600 leading-relaxed">
+        <p className="text-gray-600 md:leading-relaxed">
           Ensuring personalized attention for every student with a
           strict teacher-student ratio.
         </p>
@@ -142,7 +142,7 @@ const Home = () => {
           Progress Tracking
         </h3>
 
-        <p className="text-gray-600 leading-relaxed">
+        <p className="text-gray-600 md:leading-relaxed">
           Real-time performance analytics and regular parent-teacher
           reviews for consistent growth.
         </p>

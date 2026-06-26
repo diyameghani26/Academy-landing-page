@@ -29,7 +29,7 @@ export default function Testimonials() {
     <section className=" py-7 md:py-18 bg-[#F7F9FC]">
       <div className="max-w-7xl mx-auto px-5">
 
-        <h2 className="text-4xl font-bold text-center">
+        <h2 className="text-2xl font-bold text-center">
           Success Stories
         </h2>
 
@@ -41,7 +41,7 @@ export default function Testimonials() {
           {testimonials.map((item, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-200 rounded-2xl p-8 hover:border-blue-500"
+              className="bg-white border border-gray-200 rounded-2xl p-5 md:p-8 hover:border-blue-500"
             >
               <div className="flex gap-1 text-blue-600 mb-6">
                 {[...Array(5)].map((_, i) => (
@@ -53,7 +53,7 @@ export default function Testimonials() {
                 ))}
               </div>
 
-              <p className="italic text-gray-700 leading-8 mb-8">
+              <p className="italic text-gray-700 md:leading-8 mb-8">
                 "{item.review}"
               </p>
 
