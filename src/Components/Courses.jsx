@@ -42,7 +42,7 @@ export default function Courses() {
   ];
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section className="py-6 md:py-15 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         
         {/* Heading */}
@@ -82,9 +82,9 @@ export default function Courses() {
                 <p>✓ Weekly Tests</p>
               </div>
 
-              <button className="text-blue-600 font-semibold hover:gap-3 flex items-center gap-2 transition-all">
+              {/* <button className="text-blue-600 font-semibold hover:gap-3 flex items-center gap-2 transition-all">
                 Learn More →
-              </button>
+              </button> */}
             </div>
           ))}
         </div>

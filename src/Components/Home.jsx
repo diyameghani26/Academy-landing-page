@@ -13,15 +13,15 @@ const Home = () => {
       
    {/* left */}
       <div>
-        <span className="inline-flex items-center gap-2 rounded-full bg-blue-50 text-blue-600 px-3 py-2  text-sm ">
+        <span className="inline-flex items-center gap-2 rounded-full bg-blue-50 text-blue-600 px-3 py-2 md:text-xl text-sm ">
            Where Excellence Meets Education
         </span>
 
-        <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+        <h1 className="mt-6 text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
           Helping Students
           <br />
           Achieve{" "}
-          <span className="text-[#0947a4]">
+          <span className="text-[#0947a4] text-3xl md:text-6xl">
             Academic Excellence
           </span>
         </h1>
@@ -33,11 +33,11 @@ const Home = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 mt-8">
-          <button className="bg-[#0947a4] text-white px-8 py-4 rounded-xl">
+          <button className="bg-blue-600 text-white px-8 py-4 rounded-xl text-xl">
             Book Demo Class
           </button>
 
-          <button className="border px-8 py-4 rounded-xl">
+          <button className="border border-gray-300 px-8 py-4 rounded-xl  text-xl">
             View Courses
           </button>
         </div>
@@ -55,27 +55,27 @@ const Home = () => {
     </div>
   </div>
   <section >
-  <div className="max-w-7xl mx-auto px-6 lg:px-12 py-6 mt-5 lg:mt-8 border-t border-gray-300 border-b bg-gray-50">
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+  <div className="max-w-7xl mx-auto px-6 lg:px-12 py-6 mt-5 lg:mt-16  border-t border-gray-300 border-b bg-gray-50">
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center ">
 
       <div>
-        <h3 className="text-2xl md:text-4xl font-bold text-blue-600">500+</h3>
-        <p className="text-gray-600 text-sm">Active Students</p>
+        <h3 className="text-2xl md:text-5xl font-bold text-blue-600">500+</h3>
+        <p className="text-gray-600 text-sm md:text-xl md:mt-1">Active Students</p>
       </div>
 
       <div>
-        <h3 className="text-2xl md:text-4xl  font-bold text-blue-600">95%</h3>
-        <p className="text-gray-600 text-sm">Success Rate</p>
+        <h3 className="text-2xl md:text-5xl  font-bold text-blue-600 ">95%</h3>
+        <p className="text-gray-600 text-sm md:text-xl md:mt-1">Success Rate</p>
       </div>
 
       <div>
-        <h3 className="text-2xl md:text-4xl  font-bold text-blue-600">15+</h3>
-        <p className="text-gray-600 text-sm">Years Experience</p>
+        <h3 className="text-2xl md:text-5xl  font-bold text-blue-600">15+</h3>
+        <p className="text-gray-600 text-sm md:text-xl md:mt-1">Years Experience</p>
       </div>
 
       <div>
-        <h3 className="text-2xl md:text-4xl  font-bold text-blue-600">20+</h3>
-        <p className="text-gray-600 text-sm">Expert Teachers</p>
+        <h3 className="text-2xl md:text-5xl  font-bold text-blue-600">20+</h3>
+        <p className="text-gray-600 text-sm md:text-xl md:mt-1">Expert Teachers</p>
       </div>
 
     </div>
@@ -86,12 +86,12 @@ const Home = () => {
   <div className="max-w-7xl mx-auto">
     
     {/* Heading */}
-    <div className="text-center mb-12">
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+    <div className="text-center md:mt-6 mb-12">
+      <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
         Why Choose Us?
       </h2>
 
-      <p className="max-w-2xl mx-auto text-gray-600">
+      <p className="max-w-2xl md:text-xl mx-auto text-gray-600">
         We provide a holistic learning experience that goes beyond
         standard curriculum boundaries.
       </p>
