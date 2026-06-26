@@ -17,11 +17,11 @@ const Home = () => {
            Where Excellence Meets Education
         </span>
 
-        <h1 className="mt-6 text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
+        <h1 className="mt-6 text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
           Helping Students
           <br />
           Achieve{" "}
-          <span className="text-[#0947a4] text-3xl md:text-6xl">
+          <span className="text-[#0947a4] text-4xl md:text-6xl">
             Academic Excellence
           </span>
         </h1>
@@ -55,7 +55,7 @@ const Home = () => {
     </div>
   </div>
   <section >
-  <div className="max-w-7xl mx-auto px-6 lg:px-12 py-6 mt-5 lg:mt-16  border-t border-gray-300 border-b bg-gray-50">
+  <div className="max-w-7xl mx-auto px-6 lg:px-12 py-6 mt-12 lg:mt-16  border-t border-gray-300 border-b bg-gray-50">
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center ">
 
       <div>
