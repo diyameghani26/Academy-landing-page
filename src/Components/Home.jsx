@@ -1,4 +1,9 @@
 import React from 'react'
+import {
+  GraduationCap,
+  Users,
+  ChartColumn,
+} from "lucide-react";
 
 const Home = () => {
   return (
@@ -16,7 +21,7 @@ const Home = () => {
           Helping Students
           <br />
           Achieve{" "}
-          <span className="text-blue-600">
+          <span className="text-[#0947a4]">
             Academic Excellence
           </span>
         </h1>
@@ -28,7 +33,7 @@ const Home = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 mt-8">
-          <button className="bg-blue-600 text-white px-8 py-4 rounded-xl">
+          <button className="bg-[#0947a4] text-white px-8 py-4 rounded-xl">
             Book Demo Class
           </button>
 
@@ -97,9 +102,9 @@ const Home = () => {
       
       {/* Card 1 */}
       <div className="rounded-2xl border border-gray-200 p-8 hover:border-blue-500 transition-all duration-300">
-        <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-6">
-          🎓
-        </div>
+       <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-6">
+  <GraduationCap className="w-6 h-6 text-blue-600" />
+</div>
 
         <h3 className="text-2xl font-semibold mb-3">
           Expert Faculty
@@ -112,10 +117,10 @@ const Home = () => {
       </div>
 
       {/* Card 2 */}
-      <div className="rounded-2xl border border-blue-500 p-8 shadow-md">
-        <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-6">
-          👥
-        </div>
+      <div className="rounded-2xl border border-gray-200 hover:border-blue-500 p-8 shadow-md">
+       <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-6">
+  <Users className="w-6 h-6 text-blue-600" />
+</div>
 
         <h3 className="text-2xl font-semibold mb-3">
           Small Batch Sizes
@@ -129,9 +134,9 @@ const Home = () => {
 
       {/* Card 3 */}
       <div className="rounded-2xl border border-gray-200 p-8 hover:border-blue-500 transition-all duration-300">
-        <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-6">
-          📊
-        </div>
+       <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-6">
+  <ChartColumn className="w-6 h-6 text-blue-600" />
+</div>
 
         <h3 className="text-2xl font-semibold mb-3">
           Progress Tracking

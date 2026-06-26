@@ -2,7 +2,7 @@ import React from 'react'
 import Nav from './Components/Nav'
 import Courses from './Components/Courses'
 import Home from './Components/Home'
-import Results from './Components/Results'
+import Testimonials from './Components/Testimonials'
 import Contact from './Components/Contact'
 import About from './Components/About'
 const App = () => {
@@ -11,7 +11,7 @@ const App = () => {
       <Nav/>
       <Home/>
       <Courses/>
-      <Results/>
+     <Testimonials/>
       <About/>
       <Contact/>
     </div>

@@ -1,11 +1,67 @@
-import React from 'react'
+import { useState } from "react";
+import { ChevronDown } from "lucide-react";
 
-const About = () => {
+export default function FAQ() {
+  const faqs = [
+    {
+      question: "How do I book a demo class?",
+      answer:
+        "Click on the 'Book Demo Class' button, fill in your details, and our team will contact you shortly.",
+    },
+    {
+      question: "What is the teacher-to-student ratio?",
+      answer:
+        "We maintain a low teacher-to-student ratio to ensure every student receives personalized attention.",
+    },
+    {
+      question: "Are there online classes available?",
+      answer:
+        "Yes! We offer both online and offline classes with live doubt-solving sessions.",
+    },
+  ];
+
+  const [open, setOpen] = useState(0);
+
   return (
-    <div>
-      About
-    </div>
-  )
-}
+    <section className="py-24 bg-[#F7F9FC]">
+      <div className="max-w-4xl mx-auto px-5">
+        <h2 className="text-4xl font-bold text-center mb-12">
+          Frequently Asked Questions
+        </h2>
 
-export default About
+        <div className="space-y-5">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="bg-white border border-gray-300 rounded-xl overflow-hidden"
+            >
+              <button
+                onClick={() =>
+                  setOpen(open === index ? null : index)
+                }
+                className="w-full flex justify-between items-center px-6 py-5 text-left"
+              >
+                <span className="font-semibold">
+                  {faq.question}
+                </span>
+
+                <ChevronDown
+                  size={20}
+                  className={`transition ${
+                    open === index ? "rotate-180" : ""
+                  }`}
+                />
+              </button>
+
+              {open === index && (
+                <div className="px-6 pb-5 text-gray-600 leading-7">
+                  {faq.answer}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
