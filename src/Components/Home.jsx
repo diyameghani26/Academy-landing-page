@@ -7,12 +7,12 @@ import {
 
 const Home = () => {
   return (
-   <section className="px-6 lg:px-12 py-5 lg:py-6">
+   <section className="px-6 lg:px-12   ">
   <div className="max-w-7xl mx-auto">
     <div className="grid lg:grid-cols-2 gap-12 items-center">
       
    {/* left */}
-      <div>
+      <div className='mt-30 lg:mt-50'>
         <span className="inline-flex items-center gap-2 rounded-full bg-blue-50 text-blue-600 px-3 py-2 md:text-xl text-sm ">
            Where Excellence Meets Education
         </span>
@@ -26,7 +26,7 @@ const Home = () => {
           </span>
         </h1>
 
-        <p className=" mt-2 md:mt-6 text-gray-600  text-sm md:text-lg max-w-xl">
+        <p className=" mt-4 md:mt-6 text-gray-600  text-base md:text-lg max-w-xl">
           Experience a tailored learning environment where
           personalized mentorship meets modern educational
           technology to unlock your true potential.
@@ -48,7 +48,7 @@ const Home = () => {
         <img
           src="./coaching.jpg"
           alt="Students Learning"
-          className="w-full rounded-3xl shadow-lg"
+          className="w-full rounded-3xl shadow-lg  lg:mt-50"
         />
       </div>
 
@@ -82,16 +82,16 @@ const Home = () => {
   </div>
 </section>
 
-<section className="py-16 px-4 sm:px-6 lg:px-8">
+<section className="py-14 px-4 sm:px-6 lg:px-8">
   <div className="max-w-7xl mx-auto">
     
     {/* Heading */}
-    <div className="text-center md:mt-6 mb-12">
-      <h2 className="text-2xl md:text-5xl font-bold text-gray-900 mb-4">
+    <div className="text-center md:mt-17  mb-12">
+      <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
         Why Choose Us?
       </h2>
 
-      <p className="max-w-2xl md:text-xl mx-auto text-gray-600">
+      <p className="max-w-2xl md:text-xl  mx-auto md:mt-9 text-gray-600">
         We provide a holistic learning experience that goes beyond
         standard curriculum boundaries.
       </p>

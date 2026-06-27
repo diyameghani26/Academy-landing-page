@@ -23,9 +23,9 @@ export default function FAQ() {
   const [open, setOpen] = useState(0);
 
   return (
-    <section className="  md:py-15 bg-[#F7F9FC]">
+    <section className=" py-12 md:py-15 bg-[#F7F9FC]">
       <div className="max-w-4xl mx-auto px-5">
-        <h2 className="text-4xl font-bold text-center mb-12">
+        <h2 className="text-3xl font-bold text-center mb-12">
           Frequently Asked Questions
         </h2>
 

@@ -18,7 +18,7 @@ export default function Navbar() {
 ];
 
   return (
-    <header className="w-full bg-white border-b border-gray-100">
+    <header className="w-full fixed bg-white border-b border-gray-100">
       <div className="w-full py-3  md:px-6 lg:px-4 lg:py-4">
         <nav className="h-16 flex items-center justify-between">
           
@@ -77,7 +77,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="lg:hidden  text-center  ">
+          <div className="lg:hidden bg-gray-100 text-center  py-6">
 
 <ul className="flex flex-col text-center gap-5">
   {navLinks.map((link) => (

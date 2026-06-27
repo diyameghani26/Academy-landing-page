@@ -42,23 +42,23 @@ export default function Courses() {
   ];
 
   return (
-    <section className=" md:py-15 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section className="py-12 md:py-15  sm:px-6 lg:px-8 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         
         {/* Heading */}
         <div className="text-center mb-14">
-          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Popular Courses
           </h2>
 
-          <p className="max-w-2xl mx-auto text-gray-600 md:text-lg">
+          <p className="max-w-2xl mx-auto text-gray-600 md:text-lg md:mt-9">
             Explore our most sought-after programs designed to help students
             excel in academics and competitive examinations.
           </p>
         </div>
 
         {/* Courses Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-8">
           {courses.map((course, index) => (
             <div
               key={index}

@@ -16,19 +16,19 @@ export default function Footer() {
    <footer className="bg-[#F7F9FC] pt-16 lg:pt-20">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         {/* Top Footer */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16 pb-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-50 pb-14">
 
           {/* Left Section */}
           <div>
             {/* Logo */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center ">
               <img
                 src="./logo.png"
                 alt="Bright Future Academy"
-                className="w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 object-contain shrink-0"
+                className="w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 object-contain shrink-0 lg:-mt-5"
               />
 
-              <h2 className="text-xl sm:text-2xl font-bold text-blue-600 leading-tight">
+              <h2 className="text-xl sm:text-2xl font-bold text-blue-600 leading-tight lg:-mt-7">
                 Bright Future Academy
               </h2>
             </div>

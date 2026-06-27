@@ -29,15 +29,15 @@ export default function Testimonials() {
     <section className=" py-7 md:py-18 bg-[#F7F9FC]">
       <div className="max-w-7xl mx-auto px-5">
 
-        <h2 className="text-2xl font-bold text-center">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center">
           Success Stories
         </h2>
 
-        <p className="text-gray-500 text-center mt-3 mb-14">
+        <p className="text-gray-500 text-center mt-3 mb-10">
           Hear from our students who turned their dreams into reality.
         </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
           {testimonials.map((item, index) => (
             <div
               key={index}
