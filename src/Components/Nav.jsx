@@ -100,9 +100,9 @@ export default function Navbar() {
   ))}
 </ul>
 
-            <button className="w-full mt-4 bg-[#0947a4] text-white py-3 rounded-xl">
+            {/* <button className="w-full mt-4 bg-[#0947a4] text-white py-3 rounded-xl">
               Book Demo Class
-            </button>
+            </button> */}
           </div>
         )}
       </div>
