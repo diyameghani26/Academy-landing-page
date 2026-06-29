@@ -26,12 +26,17 @@ const testimonials = [
 
 export default function Testimonials() {
   return (
-    <section className=" py-7 md:py-18 bg-[#F7F9FC]">
-      <div className="max-w-7xl mx-auto px-5">
+<section className="py-7 md:py-18 bg-[#F7F9FC]">
+  <div className="max-w-7xl mx-auto px-5">
 
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center">
+    {/* Heading */}
+    <div className="text-center mb-3 md:mb-9">
+      <div className="inline-block px-8 py-4 rounded-2xl bg-blue-600 shadow-lg">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
           Success Stories
         </h2>
+      </div>
+      </div>
 
         <p className="text-gray-500 text-center mt-3 mb-10">
           Hear from our students who turned their dreams into reality.

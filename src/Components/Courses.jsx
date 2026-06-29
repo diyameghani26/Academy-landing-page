@@ -41,54 +41,53 @@ export default function Courses() {
     },
   ];
 
-  return (
-    <section className="py-12 md:py-15  sm:px-6 lg:px-8 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
-        
-        {/* Heading */}
-        <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+return (
+  <section className="py-12 md:py-15 sm:px-6 lg:px-8 bg-gray-50">
+    <div className="max-w-7xl mx-auto">
+
+      {/* Heading */}
+      <div className="text-center mb-14">
+        <div className="inline-block px-8 py-4 rounded-2xl bg-blue-600 shadow-lg">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
             Popular Courses
           </h2>
-
-          <p className="max-w-2xl mx-auto text-gray-600 md:text-lg md:mt-9">
-            Explore our most sought-after programs designed to help students
-            excel in academics and competitive examinations.
-          </p>
         </div>
 
-        {/* Courses Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-8">
-          {courses.map((course, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl border border-gray-200 p-7 hover:border-blue-500 hover:-translate-y-2 transition-all duration-300"
-            >
-              <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-5">
-                {course.icon}
-              </div>
-
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                {course.title}
-              </h3>
-
-              <p className="text-gray-600 leading-relaxed mb-5">
-                {course.desc}
-              </p>
-
-              <div className="space-y-2 text-sm text-gray-600 mb-5">
-                <p>✓ Live Classes</p>
-                <p>✓ Study Material</p>
-                <p>✓ Weekly Tests</p>
-              </div>
-
-              {/* <button className="text-blue-600 font-semibold hover:gap-3 flex items-center gap-2 transition-all">
-                Learn More →
-              </button> */}
-            </div>
-          ))}
-        </div>
+        <p className="max-w-2xl mx-auto px-2 text-gray-600 md:text-lg mt-6">
+          Explore our most sought-after programs designed to help students
+          excel in academics and competitive examinations.
+        </p>
       </div>
-    </section>
-  );
+
+      {/* Courses Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-8">
+        {courses.map((course, index) => (
+          <div
+            key={index}
+            className="bg-white rounded-2xl border border-gray-200 p-7 hover:border-blue-500 hover:-translate-y-2 transition-all duration-300"
+          >
+            <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-5">
+              {course.icon}
+            </div>
+
+            <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              {course.title}
+            </h3>
+
+            <p className="text-gray-600 leading-relaxed mb-5">
+              {course.desc}
+            </p>
+
+            <div className="space-y-2 text-sm text-gray-600">
+              <p>✓ Live Classes</p>
+              <p>✓ Study Material</p>
+              <p>✓ Weekly Tests</p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+);
 }

@@ -87,9 +87,11 @@ const Home = () => {
     
     {/* Heading */}
     <div className="text-center md:mt-17  mb-12">
-      <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
-        Why Choose Us?
-      </h2>
+      <div className="inline-block md:px-8 md:py-4 px-4 py-2 mb-4 rounded-2xl bg-blue-600 backdrop-blur-md border border-white/20 shadow-lg">
+  <h2 className="text-3xl md:text-5xl font-bold text-white">
+    Why Choose Us?
+  </h2>
+</div>
 
       <p className="max-w-2xl md:text-xl  mx-auto md:mt-9 text-gray-600">
         We provide a holistic learning experience that goes beyond

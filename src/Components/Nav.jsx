@@ -35,7 +35,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Menu */}
-<ul className="hidden lg:flex items-center gap-8">
+<ul className="hidden lg:flex items-center gap-8 text-xl">
   {navLinks.map((link) => (
     <li key={link.id}>
       <a
@@ -50,7 +50,7 @@ export default function Navbar() {
         {link.name}
 
         <span
-          className={`absolute left-0 -bottom-1 h-[2px] bg-[#0947a4] transition-all duration-300 ${
+          className={`absolute left-0 -bottom-1 h-0.5 bg-[#0947a4] transition-all duration-300 ${
             active === link.id ? "w-full" : "w-0"
           }`}
         ></span>
@@ -77,7 +77,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="lg:hidden bg-gray-100 text-center  py-6">
+            <div className="absolute top-full left-0 w-full lg:hidden bg-white/0 backdrop-blur-2xl border-b border-white/20 shadow-xl py-6">
 
 <ul className="flex flex-col text-center gap-5">
   {navLinks.map((link) => (
