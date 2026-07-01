@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { useEffect } from "react";
+
+import { useNavigate } from "react-router-dom";
 
 const courses = [
   "Foundation 6-8",
@@ -7,12 +10,19 @@ const courses = [
   "JEE/NEET",
 ];
 
-import { useNavigate } from "react-router-dom";
+
 
 export default function Enrollment() {
 
   const [selected, setSelected] = useState(courses[0]);
     const navigate = useNavigate();
+
+    useEffect(() => {
+  window.scrollTo({
+    top: 0,
+    behavior: "instant", 
+  });
+}, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -96,7 +106,7 @@ export default function Enrollment() {
           <div className="flex border border-gray-300  rounded-lg overflow-hidden">
             <span className="bg-gray-100 px-4 flex items-center">+91</span>
             <input
-              placeholder="9876543210"
+              placeholder="Enter mobile number"
               className="flex-1 p-3 outline-none"
             />
           </div>

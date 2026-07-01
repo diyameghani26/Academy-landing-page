@@ -51,19 +51,21 @@ export default function Courses() {
     },
   };
 
-  const cardVariants = {
-    hidden: {
-      opacity: 0,
-      y: 50,
+ const cardVariants = {
+  hidden: {
+    opacity: 0,
+    y: 15,
+  },
+
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
     },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-      },
-    },
-  };
+  },
+};
 
   return (
     <section className="py-12 md:py-15 sm:px-6 lg:px-8 bg-gray-50">
