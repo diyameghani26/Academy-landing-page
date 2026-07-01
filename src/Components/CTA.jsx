@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 
 export default function CTA() {
   return (
@@ -7,7 +8,7 @@ export default function CTA() {
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{  once: false,
-  amount: 0.3,}}
+           amount: 0.3,}}
         transition={{ duration: 0.8 }}
         className="max-w-7xl mx-auto bg-blue-600 rounded-3xl px-6 md:px-14 py-9 flex flex-col lg:flex-row items-center justify-between gap-4 md:gap-10"
       >
@@ -16,7 +17,7 @@ export default function CTA() {
           initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{  once: false,
-  amount: 0.3,}}
+            amount: 0.3,}}
           transition={{ delay: 0.2, duration: 0.7 }}
           className="text-white"
         >
@@ -30,7 +31,7 @@ export default function CTA() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{  once: false,
-  amount: 0.3, }}
+                amount: 0.3, }}
             transition={{ delay: 0.4, duration: 0.7 }}
             className="md:mt-6 mt-4 text-blue-100 max-w-xl md:text-xl"
           >
@@ -41,11 +42,12 @@ export default function CTA() {
         </motion.div>
 
         {/* Button */}
-        <motion.button
+      <Link to="/enrollment" >
+       <motion.button
           initial={{ opacity: 0, x: 60 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{  once: false,
-  amount: 0.3,}}
+              amount: 0.3,}}
           transition={{ delay: 0.5, duration: 0.7 }}
           whileHover={{
             scale: 1.08,
@@ -56,6 +58,7 @@ export default function CTA() {
         >
           Enroll Now
         </motion.button>
+        </Link>
       </motion.div>
     </section>
   );

@@ -5,8 +5,11 @@ import Testimonials from "./Components/Testimonials";
 import About from "./Components/About";
 import CTA from "./Components/CTA";
 import Footer from "./Components/Footer";
+import Enrollment from "./Components/Enrollment";
+import { Routes, Route } from "react-router-dom";
 
-const App = () => {
+
+const LandingPage = () => {
   return (
     <>
       <Nav />
@@ -30,10 +33,20 @@ const App = () => {
       <section id="contact" className="scroll-mt-24">
         <CTA />
         <Footer />
+
       </section>
     </>
   );
 };
 
+
+const App = () => {
+  return (
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/enrollment" element={<Enrollment />} />
+    </Routes>
+  );
+};
 export default App;
 
