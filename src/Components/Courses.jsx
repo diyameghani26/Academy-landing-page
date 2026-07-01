@@ -6,6 +6,7 @@ import {
   Calculator,
   Languages,
 } from "lucide-react";
+import { motion } from "motion/react";
 
 export default function Courses() {
   const courses = [
@@ -41,53 +42,112 @@ export default function Courses() {
     },
   ];
 
-return (
-  <section className="py-12 md:py-15 sm:px-6 lg:px-8 bg-gray-50">
-    <div className="max-w-7xl mx-auto">
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.15,
+      },
+    },
+  };
 
-      {/* Heading */}
-      <div className="text-center mb-14">
-        <div className="inline-block px-8 py-4 rounded-2xl bg-blue-600 shadow-lg">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-            Popular Courses
-          </h2>
-        </div>
+  const cardVariants = {
+    hidden: {
+      opacity: 0,
+      y: 50,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+      },
+    },
+  };
 
-        <p className="max-w-2xl mx-auto px-2 text-gray-600 md:text-lg mt-6">
-          Explore our most sought-after programs designed to help students
-          excel in academics and competitive examinations.
-        </p>
-      </div>
-
-      {/* Courses Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-8">
-        {courses.map((course, index) => (
-          <div
-            key={index}
-            className="bg-white rounded-2xl border border-gray-200 p-7 hover:border-blue-500 hover:-translate-y-2 transition-all duration-300"
-          >
-            <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-5">
-              {course.icon}
-            </div>
-
-            <h3 className="text-xl font-semibold text-gray-900 mb-3">
-              {course.title}
-            </h3>
-
-            <p className="text-gray-600 leading-relaxed mb-5">
-              {course.desc}
-            </p>
-
-            <div className="space-y-2 text-sm text-gray-600">
-              <p>✓ Live Classes</p>
-              <p>✓ Study Material</p>
-              <p>✓ Weekly Tests</p>
-            </div>
+  return (
+    <section className="py-12 md:py-15 sm:px-6 lg:px-8 bg-gray-50">
+      <div className="max-w-7xl mx-auto">
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{  once: false,
+  amount: 0.3,}}
+        transition={{
+  type: "spring",
+  stiffness: 120,
+  damping: 10,
+}}
+          className="text-center mb-14"
+        >
+          <div className="inline-block px-8 py-4 rounded-2xl bg-blue-600 shadow-lg">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+              Popular Courses
+            </h2>
           </div>
-        ))}
-      </div>
 
-    </div>
-  </section>
-);
-}
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{  once: false,
+  amount: 0.3, }}
+            transition={{ delay: 0.2, duration: 0.7 }}
+            className="max-w-2xl mx-auto px-2 text-gray-600 md:text-lg mt-6"
+          >
+            Explore our most sought-after programs designed to help students
+            excel in academics and competitive examinations.
+          </motion.p>
+        </motion.div>
+
+        {/* Courses Grid */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{  once: false,
+  amount: 0.3, }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-8"
+        >
+          {courses.map((course, index) => (
+            <motion.div
+              key={index}
+              variants={cardVariants}
+              whileHover={{
+                y: -10,
+                scale: 1.03,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 250,
+              }}
+              className="bg-white rounded-2xl border border-gray-200 p-7 hover:border-blue-500 shadow-sm"
+            >
+              <motion.div
+                whileHover={{ rotate: 8, scale: 1.1 }}
+                transition={{ duration: 0.3 }}
+                className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-5"
+              >
+                {course.icon}
+              </motion.div>
+
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">
+                {course.title}
+              </h3>
+
+              <p className="text-gray-600 leading-relaxed mb-5">
+                {course.desc}
+              </p>
+
+              <div className="space-y-2 text-sm text-gray-600">
+                <p>✓ Live Classes</p>
+                <p>✓ Study Material</p>
+                <p>✓ Weekly Tests</p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+}     

@@ -1,4 +1,5 @@
 import { Star } from "lucide-react";
+import { motion } from "motion/react";
 
 const testimonials = [
   {
@@ -25,45 +26,109 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+  const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.18,
+      },
+    },
+  };
+
+  const cardVariants = {
+    hidden: {
+      opacity: 0,
+      y: 50,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+      },
+    },
+  };
+
   return (
-<section className="py-7 md:py-18 bg-[#F7F9FC]">
-  <div className="max-w-7xl mx-auto px-5">
+    <section className="py-7 md:py-18 bg-[#F7F9FC]">
+      <div className="max-w-7xl mx-auto px-5">
+        {/* Heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{  once: false,
+  amount: 0.3,}}
+         transition={{
+  type: "spring",
+  stiffness: 120,
+  damping: 10,
+}}
+          className="text-center mb-3 md:mb-9"
+        >
+          <div className="inline-block px-8 py-4 rounded-2xl bg-blue-600 shadow-lg">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+              Success Stories
+            </h2>
+          </div>
+        </motion.div>
 
-    {/* Heading */}
-    <div className="text-center mb-3 md:mb-9">
-      <div className="inline-block px-8 py-4 rounded-2xl bg-blue-600 shadow-lg">
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-          Success Stories
-        </h2>
-      </div>
-      </div>
-
-        <p className="text-gray-500 text-center mt-3 mb-10">
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{  once: false,
+  amount: 0.3,}}
+          transition={{ delay: 0.2, duration: 0.7 }}
+          className="text-gray-500 text-center mt-3 mb-10"
+        >
           Hear from our students who turned their dreams into reality.
-        </p>
+        </motion.p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
+        {/* Testimonials */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-6"
+        >
           {testimonials.map((item, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-white border border-gray-200 rounded-2xl p-5 md:p-8 hover:border-blue-500"
+              variants={cardVariants}
+              whileHover={{
+                y: -10,
+                scale: 1.03,
+              }}
+              transition={{
+                type: "spring",
+                stiffness: 250,
+              }}
+              className="bg-white border border-gray-200 rounded-2xl p-5 md:p-8 hover:border-blue-500 shadow-sm"
             >
-              <div className="flex gap-1 text-blue-600 mb-6">
+              <motion.div
+                className="flex gap-1 text-blue-600 mb-6"
+                whileHover={{ scale: 1.05 }}
+              >
                 {[...Array(5)].map((_, i) => (
-                  <Star
+                  <motion.div
                     key={i}
-                    size={18}
-                    fill="currentColor"
-                  />
+                    whileHover={{
+                      rotate: 15,
+                      scale: 1.2,
+                    }}
+                  >
+                    <Star size={18} fill="currentColor" />
+                  </motion.div>
                 ))}
-              </div>
+              </motion.div>
 
               <p className="italic text-gray-700 md:leading-8 mb-8">
                 "{item.review}"
               </p>
 
               <div className="flex items-center gap-4">
-                <img
+                <motion.img
+                  whileHover={{ scale: 1.1 }}
                   src={item.image}
                   alt={item.name}
                   className="w-14 h-14 rounded-full object-cover"
@@ -76,10 +141,9 @@ export default function Testimonials() {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
-
+        </motion.div>
       </div>
     </section>
   );
