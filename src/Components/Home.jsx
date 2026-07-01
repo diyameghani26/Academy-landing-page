@@ -125,7 +125,7 @@ whileInView={{ opacity: 1, x: 0, scale: 1 }}
     </div>
   </div>
   <section  >
-  <div className=" max-w-7xl mx-auto px-6 lg:px-12 py-6 mt-12 lg:mt-16  border-t border-gray-300 border-b bg-gray-50">
+  <div className=" max-w-7xl mx-auto px-6 lg:px-12 py-6 mt-12 lg:mt-16  border-t border-gray-300 border-b bg-red-300">
 
 
     <motion.div 
